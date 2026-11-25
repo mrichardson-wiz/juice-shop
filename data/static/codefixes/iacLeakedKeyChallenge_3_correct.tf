@@ -134,7 +134,7 @@ resource "aws_lb" "juice_shop" {
 resource "aws_lb_target_group" "juice_shop" {
   name        = "${var.project_name}-tg"
   port        = 3000
-  protocol    = "HTTP"
+  protocol    = "HTTPS"
   vpc_id      = aws_vpc.main.id
   target_type = "ip"
 
